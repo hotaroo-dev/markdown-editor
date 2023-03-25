@@ -412,6 +412,15 @@
     "@codemirror/view" "^6.0.0"
     crelt "^1.0.5"
 
+"@codemirror/search@^6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@codemirror/search/-/search-6.3.0.tgz#d48b2d636fc7474613e240ba8e56c4c5e6e51822"
+  integrity sha512-rBhZxzT34CarfhgCZGhaLBScABDN3iqJxixzNuINp9lrb3lzm0nTpR77G1VrxGO3HOGK7j62jcJftQM7eCOIuw==
+  dependencies:
+    "@codemirror/state" "^6.0.0"
+    "@codemirror/view" "^6.0.0"
+    crelt "^1.0.5"
+
 "@codemirror/state@^6.0.0", "@codemirror/state@^6.1.4", "@codemirror/state@^6.2.0":
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/@codemirror/state/-/state-6.2.0.tgz#a0fb08403ced8c2a68d1d0acee926bd20be922f2"
@@ -772,6 +781,11 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
+
+"@replit/codemirror-vim@^6.0.11":
+  version "6.0.11"
+  resolved "https://registry.yarnpkg.com/@replit/codemirror-vim/-/codemirror-vim-6.0.11.tgz#96c603efbe47d4eada69c449a1e235c1b4dd2f35"
+  integrity sha512-b3umG+3DR9LfNjrPBk1849Cp8WHgFbYFhlFvGg62br03NdVquVKxaQonK7xA8WGurzQeQOpBW+hhr7mzZxWksA==
 
 "@types/debug@^4.0.0":
   version "4.1.7"

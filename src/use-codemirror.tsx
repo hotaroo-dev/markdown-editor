@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { EditorState } from '@codemirror/state'
 import {
+  drawSelection,
   EditorView,
   highlightActiveLine,
   highlightActiveLineGutter,
@@ -23,6 +24,7 @@ import { tags } from '@lezer/highlight'
 import { markdown, markdownLanguage } from '@codemirror/lang-markdown'
 import { languages } from '@codemirror/language-data'
 import { oneDark } from '@codemirror/theme-one-dark'
+import { vim } from '@replit/codemirror-vim'
 
 interface Props {
   initialDoc: string
@@ -85,6 +87,8 @@ const useCodeMirror = <T extends Element>(
         bracketMatching(),
         highlightActiveLine(),
         syntaxHighlighting(markdownHighlighting),
+        drawSelection(),
+        vim(),
         markdown({
           base: markdownLanguage,
           codeLanguages: languages,
