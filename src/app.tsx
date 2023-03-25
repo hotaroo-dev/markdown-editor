@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useCallback, useState } from 'react'
+import Editor from './editor'
+import './app.css'
 
 const App: React.FC = () => {
+  const [doc, setDoc] = useState<string>('# Hello, World\n')
+
+  const handleDocChange = useCallback((newDoc: string) => {
+    setDoc(newDoc)
+  }, [])
+
   return (
-    <div>
-      <p>Hello World</p>
+    <div className="app">
+      <Editor initialDoc={doc} onChange={handleDocChange} />
     </div>
-  );
-};
+  )
+}
+
+export default App
