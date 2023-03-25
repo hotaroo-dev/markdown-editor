@@ -2,6 +2,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  background-color: #0d1117;
 }
 
 body {
@@ -16,4 +17,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  height: 100%;
 }

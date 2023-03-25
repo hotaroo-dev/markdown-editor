@@ -7,7 +7,12 @@ import {
   keymap,
   lineNumbers
 } from '@codemirror/view'
-import { defaultKeymap, history, historyKeymap } from '@codemirror/commands'
+import {
+  defaultKeymap,
+  history,
+  historyKeymap,
+  indentWithTab
+} from '@codemirror/commands'
 import {
   indentOnInput,
   bracketMatching,
@@ -28,6 +33,16 @@ export const transparentTheme = EditorView.theme({
   '&': {
     backgroundColor: 'transparent !important',
     height: '100%'
+  },
+  '&.cm-focused': {
+    outline: 'none !important'
+  },
+  // '.cm-gutters': {
+  //   backgroundColor: '#fff !important',
+  //   color: '#181818 !important'
+  // },
+  '.cm-activeLineGutter': {
+    backgroundColor: '#6699ff0b !important'
   }
 })
 
@@ -62,7 +77,7 @@ const useCodeMirror = <T extends Element>(
     const startState = EditorState.create({
       doc: props.initialDoc,
       extensions: [
-        keymap.of([...defaultKeymap, ...historyKeymap]),
+        keymap.of([...defaultKeymap, ...historyKeymap, indentWithTab]),
         lineNumbers(),
         highlightActiveLineGutter(),
         history(),
