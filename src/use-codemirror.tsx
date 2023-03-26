@@ -39,10 +39,6 @@ export const transparentTheme = EditorView.theme({
   '&.cm-focused': {
     outline: 'none !important'
   },
-  // '.cm-gutters': {
-  //   backgroundColor: '#fff !important',
-  //   color: '#181818 !important'
-  // },
   '.cm-activeLineGutter': {
     backgroundColor: '#6699ff0b !important'
   }
