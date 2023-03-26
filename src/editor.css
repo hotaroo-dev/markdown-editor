@@ -1,4 +1,11 @@
 .editor-wrapper {
   height: 100%;
   flex: 0 0 50%;
+  font-size: 14px;
+}
+
+@media (prefers-color-scheme: light) {
+  .editor-wrapper .cm-editor {
+    color: #24292f;
+  }
 }
